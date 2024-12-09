@@ -1,0 +1,51 @@
+plugins {
+    id 'com.github.node-gradle.node' version '3.5.1'
+}
+
+jar {
+    enabled(false)
+}
+
+node {
+    version = '18.14.0'
+    distBaseUrl = 'https://nodejs.org/dist'
+    download = true
+    yarnVersion = '1.22.19'
+}
+
+task yarnBuild(type: YarnTask) {
+    args = ['run', 'build']
+}
+assemble.dependsOn(yarnBuild)
+
+task updateVersion {
+    doLast {
+        def file = file('package.json')
+        def content = file.getText('UTF-8')
+        content = content.replaceAll('"version":\\s*".*?"', '"version": "' + project.version + '"')
+        file.write(content, 'UTF-8')
+    }
+}
+yarnBuild.dependsOn(updateVersion)
+
+//task yarnTest(type: YarnTask) {
+//    args = ['test']
+//}
+//test.dependsOn(yarnTest)
+
+processResources.dependsOn(yarn)
+
+configure(yarnBuild) {
+    group = 'yarn'
+    description = 'compiles frontend files into dist/spa'
+}
+
+//configure(yarnTest) {
+//    group = 'yarn'
+//    description = 'runs tests using yarn'
+//}
+
+configure(updateVersion) {
+    group = 'build'
+    description = 'updates the version property in package.json'
+}

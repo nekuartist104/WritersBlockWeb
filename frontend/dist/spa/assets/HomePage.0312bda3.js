@@ -1,0 +1,1 @@
+import{aR as e,F as t,_ as s,a0 as a}from"./index.08ad63da.js";const o={},c=a("h2",{style:{"font-style":"italic"}},"sketty betty",-1),n=[c];function r(_,l){return t(),s("div",null,n)}var d=e(o,[["render",r]]);export{d as default};

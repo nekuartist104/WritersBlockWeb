@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'project-report'
+}
+
+jar {
+    enabled(false)
+}
+
+subprojects {
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(17))
+        }
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+    apply plugin: 'project-report'
+
+    compileJava.options.encoding = 'UTF-8'
+
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://repo.spring.io/milestone'
+        }
+        maven {
+            url 'https://repo.spring.io/snapshot'
+        }
+    }
+
+    test {
+        testLogging.exceptionFormat = 'full'
+        testLogging.events = ['standardOut', 'failed', 'skipped']
+        outputs.upToDateWhen { false }
+        useJUnitPlatform()
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\src",
+    "\\backend\\src\\main",
+    "\\backend\\src\\main\\java",
+    "\\backend\\src\\main\\java\\moveslikejagger",
+    "\\backend\\src\\main\\java\\moveslikejagger\\controller",
+    "\\frontend"
+  ],
+  "SelectedNode": "\\frontend\\package.json",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="WebProject" target="17" />
+      <module name="WebProject.backend" target="17" />
+      <module name="WebProject.backend.main" target="17" />
+      <module name="WebProject.backend.test" target="17" />
+      <module name="WebProject.frontend" target="17" />
+      <module name="WebProject.frontend.main" target="17" />
+      <module name="WebProject.frontend.test" target="17" />
+      <module name="WebProject.main" target="17" />
+      <module name="WebProject.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
