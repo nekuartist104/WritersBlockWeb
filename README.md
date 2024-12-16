@@ -32,3 +32,11 @@ There are junit tests that can be run using intellij to give decent coverage
 ### Development
 
 This is in the middle of development so please expect some features will not be ready until further on when they are needed for my personal use.
+
+![](./character.png)
+
+![](./location.png)
+
+![](./area.png)
+
+![](./edit.png)
